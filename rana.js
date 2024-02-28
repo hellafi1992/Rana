@@ -1,12 +1,12 @@
 const cells = document.querySelectorAll('.cell');
 const resetButton = document.getElementById('reset-button');
-let currentPlayer = 'X';
+let currentPlayer = '😍';
 
 cells.forEach(cell => {
   cell.addEventListener('click', () => {
     if (cell.textContent === '') {
       cell.textContent = currentPlayer;
-      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      currentPlayer = currentPlayer === '😍' ? '😭' : '😍';
     }
   });
 });
@@ -15,5 +15,5 @@ resetButton.addEventListener('click', () => {
   cells.forEach(cell => {
     cell.textContent = '';
   });
-  currentPlayer = 'X';
+  currentPlayer = '😍';
 });
